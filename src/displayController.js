@@ -1,4 +1,21 @@
+import renderComponents from './renderComponents'
+
 const displayController = (() => {
+
+    const checkPresenceOf = () => {
+        let home = document.getElementById('home');
+        let about = document.getElementById('about');
+        let menu = document.getElementById('menu');
+        if (home) {
+            return home;
+        } else if (about) {
+            return about;
+        } else if (menu) {
+            return menu;
+        }else{
+            console.log('No Content Parsed');
+        }
+    }
 
 	const listenBtns = () => {
 		document.getElementById('home-btn').addEventListener('click', _handleHome);
@@ -7,16 +24,24 @@ const displayController = (() => {
 	}
 
 	const _handleHome = () => {
-		console.log('Handle Home is Workin');	
+        if (checkPresenceOf()) {
+            renderComponents.unRender(checkPresenceOf().id);
+        }
+        renderComponents.renderHome();
 	}
 
 	const _handleAbout = () => {
-		console.log('Handle About is Workin');
-
+        if (checkPresenceOf()) {
+		    renderComponents.unRender(checkPresenceOf().id);
+        }
+        renderComponents.renderAbout();
 	}
 
 	const _handleMenu = () => {
-		console.log('Handle Menu is Workin');
+		if (checkPresenceOf()) {
+            renderComponents.unRender(checkPresenceOf().id);
+        }
+        renderComponents.renderMenu();
 	}
 
 	return { listenBtns };

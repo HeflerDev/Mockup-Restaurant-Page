@@ -1,7 +1,7 @@
 // FF that handle the component rendering
 const renderComponents = (() => {
 	// Function that creates a simple Tag
-	const createTag = (element, id = null, str = 'component', parentId = 'content') => {
+	const renderTag = (element, id = null, str = 'component', parentId = 'content') => {
         	let tag = document.createElement(element);
         	tag.classList.add(str);
 		if(id) {
@@ -11,7 +11,7 @@ const renderComponents = (() => {
         	return tag;
 	};
 
-	return { createTag }
+	return { renderTag };
 })();
 
 export default renderComponents;

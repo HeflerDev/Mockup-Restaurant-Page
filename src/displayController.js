@@ -70,6 +70,7 @@ const displayController = (() => {
             renderComponents.unRender(_checkPresenceOf().id);
         }
         renderComponents.renderMenu();
+            renderComponents.renderMenuSection();
         _swapBg();
 	}
 

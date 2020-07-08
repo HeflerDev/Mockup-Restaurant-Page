@@ -23,11 +23,10 @@ const displayController = (() => {
     if (check) {
       if (check.id !== 'home');
       document.getElementById(`${check.id}-btn`).classList.remove('button-active');
-      document.getElementById(`${check.id}-btn`).classList.add('button');
+      document.getElementById(`${check.id}-btn`).classList.add('btn');
     }
 
     const btn = document.getElementById(btnId);
-    btn.classList.remove('button');
     btn.classList.add('button-active');
   };
 

@@ -4,10 +4,10 @@
  */
 /* eslint no-underscore-dangle: 0 */
 const renderComponents = (() => {
-  /*
+ /*
      * Function that creates a simple Tag
      * It can take multiple args to the class, in form of array
-     */
+ */
   const _renderTag = (element, id = null, addClass = null, parentId = 'content') => {
     const tag = document.createElement(element);
     if (addClass && Array.isArray(addClass)) {
@@ -28,7 +28,7 @@ const renderComponents = (() => {
   // Render  the Home Section
   const renderHome = () => {
     _renderTag('div', 'home', ['minibox', 'column'], 'content-container');
-    _renderTag('p', 'home-content', ['minibox', 'column'], 'home').innerHTML = '<h2>LaRosa Restaurant<h2>';
+    _renderTag('p', 'home-content', ['minibox', 'column'], 'home');
     _renderTag('p', 'home-description', ['minibox', 'column'], 'home-content').innerHTML = 'Welcome to our page! Here you can browse our delicious menu or enter in contact with us! <br> To do that, just browse between the tabs.<br>This project was made by <a href="https://github.com/HeflerDev" target="_blank"> Henrique Hefler </a> as a project of Microverse to pratice the tabbing system.';
   };
 

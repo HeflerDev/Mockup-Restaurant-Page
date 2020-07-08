@@ -12,6 +12,10 @@ This project counts towards Microverse graduation. It is intended to be a profes
 * CSS
 * [BitBox Framework](https://github.com/HeflerDev/BitBox-Framework)
 
+## Live Preview
+
+[Check Live Version here](https://raw.githack.com/HeflerDev/Mockup-Restaurant-Page/feature/main/dist/index.html)
+
 ## Project Specifications
 
 [The Odin Project](https://www.theodinproject.com/courses/javascript/lessons/restaurant-page)

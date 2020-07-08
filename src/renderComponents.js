@@ -4,7 +4,7 @@
  */
 /* eslint no-underscore-dangle: 0 */
 const renderComponents = (() => {
- /*
+  /*
      * Function that creates a simple Tag
      * It can take multiple args to the class, in form of array
  */

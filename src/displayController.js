@@ -1,4 +1,7 @@
 import renderComponents from './renderComponents';
+import renderHomeTab from './renderHomeTab';
+import renderAboutTab from './renderAboutTab';
+import renderMenuTab from './renderMenuTab';
 /* eslint no-underscore-dangle: 0 */
 
 const displayController = (() => {
@@ -40,8 +43,8 @@ const displayController = (() => {
     if (_checkPresenceOf()) {
       renderComponents.unRender(_checkPresenceOf().id);
     }
-    renderComponents.renderMenu();
-    renderComponents.renderMenuSection();
+    renderMenuTab.renderMenu();
+    renderMenuTab.renderMenuSection();
     _swapBg();
   };
 
@@ -51,14 +54,14 @@ const displayController = (() => {
     if (check) {
       renderComponents.unRender(check.id);
     }
-    renderComponents.renderHome();
+    renderHomeTab.renderHome();
     _swapBg();
   };
 
   const _handleAbout = () => {
     _swapBtns('about-btn');
     if (_checkPresenceOf()) { renderComponents.unRender(_checkPresenceOf().id); }
-    renderComponents.renderAbout();
+    renderAboutTab.renderAbout();
     _swapBg();
   };
 

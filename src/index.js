@@ -5,18 +5,20 @@
  * contact: hheflerdevelopment@gmail.com
  */
 
-// General Utilities for better code
-/* eslint-disable no-unused-vars */
-import _ from 'lodash';
-/* eslint-enable no-unused-vars */
 // Module that handle the components Rendering
 import renderComponents from './renderComponents';
 // Module that handle the events
 import displayController from './displayController';
+// Render the Home Tab
+import renderHomeTab from './renderHomeTab';
+// Render the About Tab
+import renderAboutTab from './renderAboutTab';
+// Render the Menu Tab
+import renderMenuTab from './renderMenuTab';
 
 window.onload = function main() {
   // Sets Home tab as Default Open Tab
-  renderComponents.renderHome();
+  renderHomeTab.renderHome();
   document.getElementById('home').classList.add('container-active');
   // Enables the Button Listener
   displayController.listenBtns();

@@ -1,8 +1,7 @@
-import renderComponents from './renderComponents' ;
+import renderComponents from './renderComponents';
 
 const renderAboutTab = (() => {
-
-const _renderAboutItem = (contact, data, num) => {
+  const renderAboutItem = (contact, data, num) => {
     renderComponents.renderTag('div', `about-section-${num}`, ['minibox', 'column'], 'about-content');
     renderComponents.renderTag('div', `about-section-container-${num}`, 'minibox', `about-section-${num}`);
     const desc = renderComponents.quickRender(`about-section-container-${num}`);
@@ -16,11 +15,11 @@ const _renderAboutItem = (contact, data, num) => {
     renderComponents.renderTag('div', 'about', 'minibox', 'content-container');
     const p = renderComponents.renderTag('div', 'about-content', ['minibox', 'column'], 'about');
     p.innerHTML = '<h3>Contact us through our phone and email us.</h3>';
-    _renderAboutItem('Phone Number:', '555-0123', 0);
-    _renderAboutItem('Email:', 'larosa@larosa.com', 1);
-    _renderAboutItem('Adress:', 'The Shipwrecked Avenue, 3, Bermuda Triangle', 2);
+    renderAboutItem('Phone Number:', '555-0123', 0);
+    renderAboutItem('Email:', 'larosa@larosa.com', 1);
+    renderAboutItem('Adress:', 'The Shipwrecked Avenue, 3, Bermuda Triangle', 2);
   };
-return { renderAbout }
+  return { renderAbout };
 })();
 
-export default renderAboutTab ;
+export default renderAboutTab;

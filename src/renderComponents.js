@@ -24,7 +24,7 @@ const renderComponents = (() => {
     return tag;
   };
 
-    // Helper to make simple rendering faster
+  // Helper to make simple rendering faster
   const quickRender = (parentId) => renderTag('p', 'paragraph', 'minibox', parentId);
   // Render  the Home Section
 
@@ -38,4 +38,3 @@ const renderComponents = (() => {
 })();
 
 export default renderComponents;
-

@@ -11,6 +11,11 @@
     "type": "git",
     "url": "git+https://github.com/HeflerDev/Mockup-Restaurant-Page.git"
   },
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"  
+  },
   "keywords": [
     "Javascript",
     "Html",

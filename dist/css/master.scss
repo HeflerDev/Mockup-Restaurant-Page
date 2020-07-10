@@ -1,0 +1,283 @@
+@import './reset.css' ;
+
+// Margins
+  $margin: 1rem ;
+  $margin-s: 2rem ;
+  $margin-m: 3rem ;
+  $margin-l: 4rem ;
+// Padding
+  $padding: $margin / 2 ;
+  $padding-s: $margin-s / 2 ;
+  $padding-m: $margin-m / 2 ;
+  $padding-l: $margin-l / 2 ;
+
+// Breakpoints
+  $breakpoint-phone: 640px ;
+  $breakpoint-tablet: 768px ;
+  $breakpoint-desktop: 1024px ;
+
+// Text Sizing
+  $text-mobile: 42px;
+  $text-mobile-big: 56px;
+  $text-mobile-huge: 72px;
+  $text-tablet: 24px;
+  $text-tablet-big: 32px;
+  $text-desktop: 12px;
+  $text-desktop-big: 18px;
+// Fonts
+  $font-title: 'Parisienne', cursive;
+  $font-text: 'Kalam', cursive ;
+  $font-accent: 'Tangerine', cursive ;
+
+/* Color Theme Swatches in Hex */
+$Urban-1-hex: #363634;
+$Urban-2-hex: #912F2D;
+$Urban-3-hex: #B0A6A0;
+$Urban-4-hex: #F0EEC5;
+$Urban-5-hex: #606665;
+
+// App Colors
+  // Text
+    $color-text-light: whitesmoke ;
+    $color-text-dark: $Urban-4-hex ;
+  // Palette
+    $color-opposite: rgb(21,21,21) ;
+    $color-primary: $Urban-1-hex ;
+    $color-secondary: $Urban-5-hex ;
+    $color-accent: $Urban-2-hex ;
+// App Radius
+  $radius-soft: 0.1rem ;
+  $radius: 0.5rem ;
+  $radius-rounded: 1rem ;
+  $radius-rounder: 2rem ;
+  $radius-circle: 50% ;
+// Border
+  $border: 0.2rem;
+  $border-line: 0.1rem;
+  $border-bold: 0.4rem;
+  $border-bolder: 0.8rem;
+
+
+// Patterns
+html{
+  font-size: $text-mobile;
+  background-color: $color-secondary;
+  @media screen and (min-device-width: $breakpoint-tablet) {
+    font-size: $text-tablet;
+  }
+
+  @media screen and (min-device-width: $breakpoint-desktop) {
+    font-size: $text-desktop-big;
+  }
+}
+
+body {
+  font-family: $font-text;
+}
+
+p, h3 {
+    text-align:center;
+}
+
+.box {
+  display: flex ;
+  width: 100% ;
+  text-align: center ;
+  flex-direction: column ;
+
+  @media screen and (max-device-width: $breakpoint-phone) {
+    margin: auto ;
+    padding: $padding ;
+  }
+
+  @media screen and (min-device-width: $breakpoint-phone) {
+    margin: auto ;
+    padding: $padding-s ;
+  }
+
+  @media screen and (min-device-width: $breakpoint-tablet) {
+      margin: auto ;
+      padding: $padding-m ;
+  }
+
+  @media screen and (min-device-width: $breakpoint-desktop) {
+      margin: auto ;
+      padding: $padding-l ;
+  }
+}
+
+.minibox {
+  display: flex ;
+  width: 100% ;
+
+  @media screen and (max-width: $breakpoint-phone) {
+    margin: auto ;
+    padding: $padding / 4 ;
+  }
+
+  @media screen and (min-width: $breakpoint-phone) {
+    margin: auto ;
+    padding: $padding-s / 4 ;
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+      margin: auto ;
+      padding: $padding-m / 4 ;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+      margin: auto ;
+      padding: $padding-l / 4 ;
+  }
+}
+
+.column {
+  flex-direction: column !important;
+}
+
+.row {
+  flex-direction: row !important ;
+}
+
+.start {
+  justify-content: flex-start !important;
+}
+
+.center {
+  justify-content: center !important;
+}
+
+.end {
+  justify-content: flex-end !important;
+}
+
+.around {
+  justify-content: space-around !important ;
+}
+
+.between {
+  justify-content: space-between !important;
+}
+
+.btn {
+  border: solid $color-secondary 2px;
+  background: $color-accent ;
+  color: $color-opposite ;
+  transition: 0.2s;
+  font-family: $font-accent;
+  font-size: 59px;
+  &:hover {
+    transition: 0.2s;
+    cursor: pointer;
+  }
+}
+
+.button-active {
+    background-color: $color-secondary;
+    font-family: $font-accent;
+    font-weight: 700;
+}
+
+.container-active {
+    background-color: $color-secondary;
+}
+
+.menu-subsection {
+    border: solid $color-accent 1px;
+    transition: 0.2s;
+    &:hover{
+        background-color: rgba(21,21,21,1);
+        transition: 0.2s;
+        color: whitesmoke;
+        border-radius: $radius;
+    }
+}
+
+.menu-image {
+    width:40%;
+    height: 250px;
+    border: solid whitesmoke 4px;
+    box-shadow: 0 0 5px $color-primary;
+    padding: 0;
+}
+
+.border{
+  border: solid $color-secondary 5px ;
+}
+
+.line {
+  border-width: $border-line ;
+}
+
+.bold {
+  border-width: $border-bold ;
+}
+
+.bolder {
+  border-width: $border-bolder ;
+}
+
+.radius {
+  border-radius: $radius ;
+}
+
+.soft {
+  border-radius: $radius-soft ;
+}
+
+.rounded {
+  border-radius: $radius-rounded ;
+}
+
+.rounder {
+  border-radius: $radius-rounder;
+}
+
+.circle {
+  border-radius: $radius-circle ;
+}
+
+.thin {
+  border-width: thin ;
+}
+
+.title {
+  color: $color-text-dark;
+  text-decoration: none;
+  transition: 0.1s;
+  width:100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-family: $font-title;
+  font-size: $text-mobile-huge;
+  background-color: $color-primary;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-image: url('../black-rose.png');
+    background-size: 100%;
+    background-position: center;
+}
+
+.no-space {
+    margin:0;
+    padding:0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.field {
+  border-radius: 5px;
+  background: $color-primary;
+  color: $color-opposite ;
+}
+
